@@ -1810,6 +1810,11 @@ dependencies = [
     { name = "torch", version = "2.7.1+cpu", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "sys_platform != 'darwin'" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "ipykernel" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "click" },
@@ -1824,6 +1829,9 @@ requires-dist = [
     { name = "scikit-learn" },
     { name = "torch", index = "https://download.pytorch.org/whl/cpu" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "ipykernel", specifier = ">=6.29.5" }]
 
 [[package]]
 name = "mpmath"
